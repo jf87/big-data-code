@@ -700,4 +700,22 @@ public class BatchWorkflow {
         uniquesElephantDB(uniquesView());
         bounceRateElephantDB(bouncesView());
     }
+
+    public static void main(String [] args) {
+       try {
+           initTestData();
+           } catch(Exception e) {
+         System.out.print("ERROR");
+         System.out.print(e);
+         
+       }
+       
+       try {
+           batchWorkflow();
+           } catch(Exception e) {
+         System.out.print("ERROR");
+         System.out.print(e);
+       }       
+         
+    }
 }
